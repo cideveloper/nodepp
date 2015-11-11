@@ -1,0 +1,13 @@
+[Service]
+WorkingDirectory=/var/apps/nodepp
+ExecStart=/usr/bin/node lib/node-epp-server.js -r verisign -p 8080
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=node-epp
+User=nodeapps
+Group=nodeapps
+Environment='NODE_ENV=production'
+
+[Install]
+WantedBy=multi-user.target
