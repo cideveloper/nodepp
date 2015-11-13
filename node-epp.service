@@ -1,6 +1,6 @@
 [Service]
 WorkingDirectory=/var/apps/nodepp
-ExecStart=/usr/bin/node lib/node-epp-server.js -r verisign -p 8080
+ExecStart=/usr/bin/node lib/node-epp-server.js -r verisign -r verisign-ote-1 -r verisign-ote-2 -p 8080
 Restart=always
 StandardOutput=syslog
 StandardError=syslog
